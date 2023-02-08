@@ -1,0 +1,57 @@
+1. Genera un nuevo keypair en tu maquina local o remota en Linux
+
+[sobrew@cuascoto ~]$ ssh-keygen -t rsa -b 4096 -C "edwar.vallejos.e@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/sobrew/.ssh/id_rsa):
+Created directory '/home/sobrew/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/sobrew/.ssh/id_rsa
+Your public key has been saved in /home/sobrew/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:xmS7PYnwp+PVxoLZ0EyqsdUYKg4yaIiH6yco3ZMuz80 edwar.vallejos.e@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|                 |
+|                 |
+|        + .      |
+|+.     = X       |
+|B.o . + S +      |
+|.= o . O O +     |
+|o. ...o * O +    |
+|+.oo+o  .+ +     |
+|..o++.E.o.       |
++----[SHA256]-----+
+
+2. Agrega SSH public key en tu perfil de Gitgub
+
+Adding a new SSH key to your account
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account 
+
+3. En tu equipo con Linux has estos pasos, en el directorio <git> que vas a trabajar:
+
+[sobrew@cuascoto python_greencore]$ git remote set-url origin git@github.com:dbpeloy/python_greencore.git
+
+
+4. Agrega un archivo de prueba
+
+[sobrew@cuascoto python_greencore]$ git add -A
+[sobrew@cuascoto python_greencore]$ git commit -am "Update README.md"
+On branch main
+Your branch is based on 'origin/main', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+
+nothing to commit, working tree clean
+[sobrew@cuascoto python_greencore]$ git push
+The authenticity of host 'github.com (192.30.255.113)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enter passphrase for key '/home/sobrew/.ssh/id_rsa':
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 259 bytes | 259.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:dbpeloy/python_greencore.git
+ * [new branch]      main -> main
