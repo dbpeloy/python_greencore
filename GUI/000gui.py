@@ -23,7 +23,7 @@ class RootDialog(tkvue.Component):
         s.configure('H1.TLabel', font=['Lato', '-60'], background='#ffffff')
         s.configure('default.TFrame', background='#ffffff')
         s.configure(
-            default.TButton"",
+            default.TButton
             foreground='#0E2933',
             background='#B6DDE2',
             bordercolor='#ACD1D6',
