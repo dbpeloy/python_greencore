@@ -1,2 +1,0 @@
-Los numeros escritos son: [25, 40, 3, 40]
-

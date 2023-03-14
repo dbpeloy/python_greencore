@@ -1,2 +1,0 @@
-Los numeros escritos son: [3, 4, 2, 20, 22]
-
