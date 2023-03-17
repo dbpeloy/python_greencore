@@ -23,6 +23,7 @@ variar según el sistema operativo en el que se está ejecutando Python.
 
 import os
 
+
 # Forma de validar que sean 4 numeros enteros de 0 a 40
 numeros = []
 for i in range(4):
